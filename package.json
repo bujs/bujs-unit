@@ -1,0 +1,43 @@
+{
+  "name": "bujs-unit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bujs/bujs-unit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bujs/bujs-unit/issues"
+  },
+  "homepage": "https://github.com/bujs/bujs-unit#readme",
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "long": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.9.0"
+  },
+  "standard": {
+    "globals": [
+      "test",
+      "expect"
+    ],
+    "ignore": [
+      "/lib/vendor/"
+    ]
+  }
+}
