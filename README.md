@@ -36,7 +36,7 @@ console.log(moToBu('123'))
 
 > Converts bu value into mo
 ```js
-const buToMo = require('bujs-unit').buToMo()
+const buToMo = require('bujs-unit').buToMo
 
 console.log(buToMo('123'))
 
