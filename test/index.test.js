@@ -6,14 +6,34 @@ const unit = require('../lib')
 test('unit.buToMo()', () => {
   expect(unit.buToMo('123')).toBe('12300000000')
   expect(unit.buToMo('0')).toBe('0')
+  expect(unit.buToMo('123.0')).toBe('12300000000')
+  expect(unit.buToMo('123.1')).toBe('12310000000')
   expect(() => {
     unit.buToMo('-1')
+  }).toThrow('invalid bu value')
+  expect(() => {
+    unit.buToMo(1)
+  }).toThrow('invalid bu value')
+  expect(() => {
+    unit.buToMo(null)
+  }).toThrow('invalid bu value')
+  expect(() => {
+    unit.buToMo(undefined)
   }).toThrow('invalid bu value')
 })
 
 test('unit.moToBu()', () => {
   expect(unit.moToBu('123')).toBe('0.00000123')
   expect(unit.moToBu('0')).toBe('0')
+  expect(() => {
+    unit.moToBu(1)
+  }).toThrow('invalid mo value')
+  expect(() => {
+    unit.moToBu(null)
+  }).toThrow('invalid mo value')
+  expect(() => {
+    unit.moToBu(undefined)
+  }).toThrow('invalid mo value')
   expect(() => {
     unit.moToBu('-1')
   }).toThrow('invalid mo value')
